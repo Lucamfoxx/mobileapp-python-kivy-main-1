@@ -1,0 +1,295 @@
+ScreenManager:
+    SplashScreen:
+    CadastroScreen:  
+    UserInfoscreen:
+
+<SplashScreen>:
+    name: 'splash'    
+    MDFloatLayout:
+        md_bg_color: 173/255, 216/255, 230/255, 1  # Cor "azul bebê"
+        Image:
+            source: "images/docs2.png"
+            size_hint: .50, .50
+            pos_hint: {"center_x": .50, "center_y": .50}
+            canvas.before:
+                Color:
+                    rgb: 1, .85, .825, 1
+        
+        MDIconButton:
+            icon: "chevron-right"
+            user_font_size: "35sp"
+            pos_hint: {"center_x": .5, "center_y": .12}      
+            on_press: app.root.current = 'Cadastro'   
+                    
+
+        MDLabel:
+            text: "YouFit"   
+            pos_hint: {"center_x": .5, "center_y": .28}       
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0
+            font_size:"35sp"
+            font_name: "Poppins-SemiBold.ttf"
+
+        MDLabel:
+            text: "Sua saúde a um toque de distância"   
+            pos_hint: {"center_x": .5, "center_y": .21}       
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0 
+            font_size:"13sp"
+            font_name: "Poppins-Regular.ttf"
+
+<MDFloatLayout>:
+    size_hint: 1, 1
+<Spinner>:
+    background_color: 0, 0, 0, 0 
+<CadastroScreen>:
+    name: 'Cadastro'
+    MDFloatLayout:
+        md_bg_color: 173/255, 216/255, 230/255, 1  # Cor "azul bebê"
+        Image:
+            source: "images/docs3.png"       
+            size_hint: .50, .50
+            pos_hint: {"center_x": .50, "center_y": .89}
+
+        MDLabel:
+            text: "B e m - v i n d o !"
+            font_size: "28sp"
+            font_name: "Poppins-SemiBold.ttf"
+            pos_hint: {"center_x": .6, "center_y": .76}    
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .65}   
+            MDLabel:
+                text:"Nome Completo"
+                font_size: "14sp"
+                font_name: "Poppins-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9} 
+            TextInput:
+                id: nome_user
+                size_hint_y: .75
+                font_name: "Poppins-Regular.ttf"
+                pos_hint: {"center_x": .49, "center_y": .4} 
+                background_color: 0, 0, 0, 0    
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size: "17sp"
+                multiline: False
+            Image: 
+                source: "images/cpf.png"     
+                pos_hint: {"center_x": .96, "center_y": .55}
+                size_hint: .7, .7
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03    
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .55}  
+            MDLabel:
+                text:"Idade"
+                font_size: "14sp"
+                font_name: "Poppins-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9} 
+            TextInput:
+                id: Idade
+                size_hint_y: .75
+                font_name: "Poppins-Regular.ttf"
+                pos_hint: {"center_x": .49, "center_y": .4} 
+                background_color: 0, 0, 0, 0    
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size: "17sp"
+                multiline: False
+            Image: 
+                source: "images/age.png"     
+                pos_hint: {"center_x": .96, "center_y": .55}
+                size_hint: .6, .6
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03    
+                md_bg_color: 120/255, 120/255, 120/255, 1 
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .45}  
+            MDLabel:
+                text:"Peso (kg)"
+                font_size: "14sp"
+                font_name: "Poppins-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9} 
+            TextInput:
+                id: Peso_user
+                size_hint_y: .75
+                font_name: "Poppins-Regular.ttf"
+                pos_hint: {"center_x": .49, "center_y": .4} 
+                background_color: 0, 0, 0, 0    
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size: "17sp"
+                multiline: False
+            Image: 
+                source: "images/peso.png"     
+                pos_hint: {"center_x": .96, "center_y": .55}
+                size_hint: .4, .4
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03    
+                md_bg_color: 120/255, 120/255, 120/255, 1   
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .35}  
+            MDLabel:
+                text:"Altura (cetros)"
+                font_size: "14sp"
+                font_name: "Poppins-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9} 
+            TextInput:
+                id: altura_user
+                size_hint_y: .75
+                font_name: "Poppins-Regular.ttf"
+                pos_hint: {"center_x": .49, "center_y": .4} 
+                background_color: 0, 0, 0, 0    
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 120/255, 120/255, 120/255, 1
+                font_size: "17sp"
+                multiline: False
+            Image: 
+                source: "images/altura.png"     
+                pos_hint: {"center_x": .96, "center_y": .55}
+                size_hint: .6, .6
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03    
+                md_bg_color: 120/255, 120/255, 120/255, 1   
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .25}  
+            MDLabel:
+                text: "Sexo"
+                font_size: "14sp"
+                font_name: "Poppins-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9} 
+            Spinner:
+                id: sexo_user
+                values: ['Masculino', 'Feminino']
+                size_hint_y: .75
+                pos_hint: {"center_x": .49, "center_y": .4} 
+
+            Image: 
+                source: "images/sexo.png"
+                pos_hint: {"center_x": .96, "center_y": .55}
+                size_hint: .4, .4
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03    
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .15}  
+            md_bg_color: 173/255, 216/255, 230/255, 1
+            MDLabel:
+                text: "Atividade Física"
+                font_size: "14sp"
+                font_name: "Poppins-Medium.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9} 
+            Spinner:
+                id: atividade_user
+                values: ['SEDENTARIO', 'LEVE', 'MODERADO', 'INTENSO', 'MUITO INTENSO']
+                size_hint_y: .75
+                pos_hint: {"center_x": .49, "center_y": .4} 
+
+            Image: 
+                source: "images/atividade.png"
+                pos_hint: {"center_x": .96, "center_y": .55}
+                size_hint: .4, .4
+
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03    
+                md_bg_color: 120/255, 120/255, 120/255, 1
+
+        Button:
+            text: "Cadastre-se"
+            background_color: 0, 0, 0, 0  # Torna o fundo do botão transparente
+            font_name: "Poppins-Medium.ttf"
+            size_hint: .79, .065
+            pos_hint: {"center_x": .5, "center_y": .05}
+            on_press: app.salvar_informacoes_csv()
+            canvas.before:
+                Color: 
+                    rgb: 50/255, 66/255, 63/255, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [2]
+
+<UserInfoscreen>:
+    name: 'user'
+    MDFloatLayout:
+        md_bg_color: 173/255, 216/255, 230/255, 1  # Cor "azul bebê"
+        Image:
+            source: "images/docs2.png"
+            size_hint: .50, .50
+            pos_hint: {"center_x": .50, "center_y": .80}
+            canvas.before:
+                Color:
+                    rgb: 1, .85, .825, 1
+
+        MDLabel:
+            text: "YouFit"   
+            pos_hint: {"center_x": .5, "center_y": .95}       
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0
+            font_size: "35sp"
+            font_name: "Poppins-SemiBold.ttf"
+
+        MDLabel:
+            text: "Selecione a opção desejada. Nossa inteligencia artificial fara o resto"   
+            pos_hint: {"center_x": .5, "center_y": .65}       
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0
+            font_size: "20sp"
+            font_name: "Poppins-Regular.ttf"
+
+        MDRaisedButton:
+            text: "DIETA"
+            pos_hint: {"center_x": .5, "center_y": .45}
+            on_release: app.on_dieta_button_press()
+            md_bg_color: 50/255, 66/255, 63/255, 1
+            elevation_normal: 10
+            radius: [15,]
+            size_hint_y: None
+            height: "40dp"
+
+        MDRaisedButton:
+            text: "TREINO"
+            pos_hint: {"center_x": .5, "center_y": .35}
+            on_release: app.on_treino_button_press()
+            md_bg_color: 50/255, 66/255, 63/255, 1
+            elevation_normal: 10
+            radius: [15,]
+            size_hint_y: None
+            height: "40dp"
+
+        MDRaisedButton:
+            text: "ROTINA"
+            pos_hint: {"center_x": .5, "center_y": .25}
+            on_release: app.on_rotina_button_press()
+            md_bg_color: 50/255, 66/255, 63/255, 1
+            elevation_normal: 10
+            radius: [15,]
+            size_hint_y: None
+            height: "40dp"
